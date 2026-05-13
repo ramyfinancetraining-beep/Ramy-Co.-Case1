@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحالة العملية الشاملة - شركة رامي للمحاسبة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            padding: 40px 20px;
+            color: #1e2a3e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 40px;
+        }
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0.5cm;
+                max-width: 100%;
+            }
+            .no-print {
+                display: none;
+            }
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            table, .document-card {
+                page-break-inside: avoid;
+            }
+        }
+        h1 {
+            font-size: 28px;
+            color: #0b3b5f;
+            border-bottom: 3px solid #0b3b5f;
+            display: inline-block;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #1e5a7a;
+            border-right: 5px solid #1e5a7a;
+            padding-right: 15px;
+            background-color: #f8fafc;
+            border-radius: 0 10px 10px 0;
+            line-height: 1.3;
+        }
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 10px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .author {
+            text-align: center;
+            background: #eef2f5;
+            padding: 10px;
+            border-radius: 40px;
+            margin: 20px 0;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            background: white;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        th {
+            background-color: #1e5a7a;
+            color: white;
+            padding: 10px 8px;
+            border: 1px solid #2c6e8f;
+            text-align: center;
+        }
+        td {
+            border: 1px solid #cbd5e1;
+            padding: 8px;
+            vertical-align: top;
+        }
+        .document-card {
+            background: #fef9e6;
+            border-right: 6px solid #e67e22;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 12px;
+            font-family: monospace;
+            white-space: pre-line;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .document-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #b85c00;
+        }
+        .note {
+            background: #e9f4e9;
+            padding: 12px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-right: 4px solid #2e7d32;
+        }
+        .two-columns {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .col {
+            flex: 1;
+            min-width: 250px;
+        }
+        .print-button {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #1e5a7a;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        button:hover {
+            background-color: #0b3b5f;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: #5f7f9e;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 15px;
+            }
+            td, th {
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="print-button no-print">
+        <button onclick="window.print();">🖨️ طباعة الصفحة / حفظ كـ PDF</button>
+    </div>
+    
+    <h1>📊 الحالة العملية المتكاملة</h1>
+    <h2>شركة رامي للمحاسبة والاستشارات المالية – يناير 2026</h2>
+    <div class="author">إعداد: أ. محمد أحمد رامي – خبير محاسبة معتمد ومدرب دولي</div>
+
+    <!-- قائمة المستندات -->
+    <h2>📎 أولاً: قائمة المستندات المرفقة</h2>
+    <table>
+        <thead>
+            <tr><th>رقم المستند</th><th>التاريخ</th><th>نوع المستند</th><th>الأطراف</th><th>المبلغ (ج)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>001</td><td>1/1/2026</td><td>إيصال إيداع بنكي</td><td>محمد رامي (رأس المال)</td><td>100,000</td></tr>
+            <tr><td>002</td><td>1/1/2026</td><td>فاتورة إيجار (مقدمة)</td><td>شركة الإسكندرية للمباني</td><td>10,000</td></tr>
+            <tr><td>003</td><td>1/1/2026</td><td>فاتورة شراء أثاث (نقدي)</td><td>شركة النيل للأثاث</td><td>60,000</td></tr>
+            <tr><td>004</td><td>2/1/2026</td><td>فاتورة شراء آجل</td><td>شركة طارق لتوريد الكتب</td><td>20,000</td></tr>
+            <tr><td>005</td><td>5/1/2026</td><td>فاتورة شراء آجل</td><td>شركة سعيد للبرامج</td><td>20,000</td></tr>
+            <tr><td>006</td><td>7/1/2026</td><td>إيصال بيع نقدي</td><td>مكتبة الإيمان</td><td>12,000</td></tr>
+            <tr><td>007</td><td>10/1/2026</td><td>فاتورة بيع آجل</td><td>شركة الأمل للتدريب</td><td>12,000</td></tr>
+            <tr><td>008</td><td>12/1/2026</td><td>إيصال بيع نقدي</td><td>هدى محمد (محاسب)</td><td>12,500</td></tr>
+            <tr><td>009</td><td>15/1/2026</td><td>شيك بنكي + أمر دفع</td><td>سداد للمورد طارق</td><td>20,000</td></tr>
+            <tr><td>010</td><td>20/1/2026</td><td>شيك بنكي + أمر دفع</td><td>سداد للمورد سعيد</td><td>20,000</td></tr>
+            <tr><td>011</td><td>25/1/2026</td><td>إيصال إيداع بنكي</td><td>من عميل الأمل (سداد)</td><td>12,000</td></tr>
+            <tr><td>012</td><td>28/1/2026</td><td>إيصال استلام نقدي</td><td>عميل مستقبلي (تدريب فبراير)</td><td>8,000</td></tr>
+            <tr><td>013</td><td>29/1/2026</td><td>إيصال سحب نقدي من البنك</td><td>تدعيم الصندوق</td><td>40,000</td></tr>
+            <tr><td>014</td><td>31/1/2026</td><td>كشف حساب بنك مصر</td><td>بنك مصر</td><td>رصيد 51,700*</td></tr>
+            <tr><td>015</td><td>31/1/2026</td><td>مذكرة إهلاك داخلي</td><td>إهلاك الأثاث</td><td>1,000</td></tr>
+            <tr><td>016</td><td>31/1/2026</td><td>مذكرة رواتب مستحقة</td><td>رواتب يناير</td><td>15,000</td></tr>
+            <tr><td>017</td><td>31/1/2026</td><td>مذكرة استهلاك إيجار</td><td>مصروف إيجار يناير</td><td>10,000</td></tr>
+            <tr><td>018</td><td>31/1/2026</td><td>إشعار بنكي (فائدة وعمولة)</td><td>بنك مصر</td><td>فائدة 200 / عمولة 500</td></tr>
+        </tbody>
+    </table>
+
+    <!-- نموذج مستند -->
+    <h2>🧾 ثانياً: نموذج مستند حقيقي (مثال)</h2>
+    <div class="document-card">
+        <div class="document-title">📄 المستند رقم 001: إيصال إيداع بنكي</div>
+        بنك مصر – فرع بني سويف<br>
+        إيصال إيداع نقدي رقم: 442 &nbsp;|&nbsp; التاريخ: 1 يناير 2026<br>
+        المودع: محمد أحمد رامي (لحساب شركة رامي للمحاسبة)<br>
+        المبلغ: مائة ألف جنيه مصري (100,000 ج.م)<br>
+        البيان: رأس مال الشركة – توقيع البنك [مختوم]
+    </div>
+    <div class="document-card">
+        <div class="document-title">📄 المستند رقم 004: فاتورة شراء آجل من طارق</div>
+        شركة طارق لتوريد الكتب – فاتورة رقم 101 – 2/1/2026<br>
+        50 نسخة كتاب "المدخل السهل لفهم الإكسيل" بسعر 400 ج = 20,000 ج<br>
+        شروط السداد: 30 يوماً (آجل) – توقيع المورد: طارق
+    </div>
+
+    <!-- القيود اليومية -->
+    <h2>📖 ثالثاً: القيود اليومية (دفتر اليومية)</h2>
+    <table>
+        <thead><tr><th>التاريخ</th><th>البيان</th><th>مدين (ج)</th><th>دائن (ج)</th></tr></thead>
+        <tbody>
+            <tr><td>1/1</td><td>من حـ/ البنك (001) &nbsp;&nbsp; إلى حـ/ رأس المال</td><td>100,000</td><td>100,000</td></tr>
+            <tr><td>1/1</td><td>من حـ/ الإيجار المدفوع مقدماً (002) &nbsp; إلى حـ/ الصندوق</td><td>10,000</td><td>10,000</td></tr>
+            <tr><td>1/1</td><td>من حـ/ الأثاث (003) &nbsp;&nbsp; إلى حـ/ الصندوق</td><td>60,000</td><td>60,000</td></tr>
+            <tr><td>2/1</td><td>من حـ/ المشتريات (004) &nbsp;&nbsp; إلى حـ/ المورد طارق</td><td>20,000</td><td>20,000</td></tr>
+            <tr><td>5/1</td><td>من حـ/ المشتريات (005) &nbsp;&nbsp; إلى حـ/ المورد سعيد</td><td>20,000</td><td>20,000</td></tr>
+            <tr><td>7/1</td><td>من حـ/ الصندوق (006) &nbsp;&nbsp; إلى حـ/ المبيعات</td><td>12,000</td><td>12,000</td></tr>
+            <tr><td>10/1</td><td>من حـ/ العميل الأمل (007) &nbsp;&nbsp; إلى حـ/ المبيعات</td><td>12,000</td><td>12,000</td></tr>
+            <tr><td>12/1</td><td>من حـ/ الصندوق (008) &nbsp;&nbsp; إلى حـ/ المبيعات</td><td>12,500</td><td>12,500</td></tr>
+            <tr><td>15/1</td><td>من حـ/ المورد طارق (009) &nbsp;&nbsp; إلى حـ/ البنك</td><td>20,000</td><td>20,000</td></tr>
+            <tr><td>20/1</td><td>من حـ/ المورد سعيد (010) &nbsp;&nbsp; إلى حـ/ البنك</td><td>20,000</td><td>20,000</td></tr>
+            <tr><td>25/1</td><td>من حـ/ البنك (011) &nbsp;&nbsp; إلى حـ/ العميل الأمل</td><td>12,000</td><td>12,000</td></tr>
+            <tr><td>28/1</td><td>من حـ/ الصندوق (012) &nbsp;&nbsp; إلى حـ/ الإيراد غير المكتسب</td><td>8,000</td><td>8,000</td></tr>
+            <tr><td>29/1</td><td>من حـ/ الصندوق (013) &nbsp;&nbsp; إلى حـ/ البنك</td><td>40,000</td><td>40,000</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ميزان المراجعة قبل التسويات -->
+    <h2>⚖️ رابعاً: ميزان المراجعة قبل التسويات (31/1/2026)</h2>
+    <table>
+        <thead><tr><th>الحساب</th><th>مدين (ج)</th><th>دائن (ج)</th></tr></thead>
+        <tbody>
+            <tr><td>الصندوق</td><td>2,500</td><td></td></tr>
+            <tr><td>البنك</td><td>32,000</td><td></td></tr>
+            <tr><td>المشتريات</td><td>40,000</td><td></td></tr>
+            <tr><td>الأثاث</td><td>60,000</td><td></td></tr>
+            <tr><td>الإيجار المدفوع مقدماً</td><td>10,000</td><td></td></tr>
+            <tr><td>رأس المال</td><td></td><td>100,000</td></tr>
+            <tr><td>المبيعات</td><td></td><td>36,500</td></tr>
+            <tr><td>الإيراد غير المكتسب</td><td></td><td>8,000</td></tr>
+            <tr><td><strong>المجموع</strong></td><td><strong>144,500</strong></td><td><strong>144,500</strong></td></tr>
+        </tbody>
+    </table>
+
+    <!-- قيود التسوية -->
+    <h2>📌 خامساً: قيود التسوية في نهاية الفترة</h2>
+    <table>
+        <thead><tr><th>البيان</th><th>مدين</th><th>دائن</th></tr></thead>
+        <tbody>
+            <tr><td>مصروف الإهلاك &nbsp;&nbsp; إلى &nbsp;&nbsp; مجمع الإهلاك (1000)</td><td>1,000</td><td>1,000</td></tr>
+            <tr><td>مصروف الرواتب &nbsp;&nbsp; إلى &nbsp;&nbsp; الرواتب المستحقة (15,000)</td><td>15,000</td><td>15,000</td></tr>
+            <tr><td>مصروف الإيجار &nbsp;&nbsp; إلى &nbsp;&nbsp; الإيجار المدفوع مقدماً (10,000)</td><td>10,000</td><td>10,000</td></tr>
+            <tr><td>من حـ/ البنك (فائدة 200) &nbsp;&nbsp; إلى &nbsp;&nbsp; إيرادات فوائد</td><td>200</td><td>200</td></tr>
+            <tr><td>من حـ/ مصروف عمولة بنك &nbsp;&nbsp; إلى حـ/ البنك</td><td>500</td><td>500</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ميزان المراجعة بعد التسويات -->
+    <h2>📊 سادساً: ميزان المراجعة بعد التسويات</h2>
+    <table>
+        <thead><tr><th>الحساب</th><th>مدين</th><th>دائن</th></tr></thead>
+        <tbody>
+            <tr><td>الصندوق</td><td>2,500</td><td></td></tr><tr><td>البنك</td><td>31,700</td><td></td></tr>
+            <tr><td>المشتريات</td><td>40,000</td><td></td></tr><tr><td>الأثاث</td><td>60,000</td><td></td></tr>
+            <tr><td>مجمع الإهلاك</td><td></td><td>1,000</td></tr>
+            <tr><td>مصروف الإهلاك</td><td>1,000</td><td></td></tr>
+            <tr><td>مصروف الرواتب</td><td>15,000</td><td></td></tr>
+            <tr><td>الرواتب المستحقة</td><td></td><td>15,000</td></tr>
+            <tr><td>مصروف الإيجار</td><td>10,000</td><td></td></tr>
+            <tr><td>مصروف عمولة بنك</td><td>500</td><td></td></tr>
+            <tr><td>إيرادات فوائد</td><td></td><td>200</td></tr>
+            <tr><td>رأس المال</td><td></td><td>100,000</td></tr>
+            <tr><td>المبيعات</td><td></td><td>36,500</td></tr>
+            <tr><td>الإيراد غير المكتسب</td><td></td><td>8,000</td></tr>
+            <tr><td><strong>المجموع</strong></td><td><strong>160,700</strong></td><td><strong>160,700</strong></td></tr>
+        </tbody>
+    </table>
+
+    <!-- القوائم المالية -->
+    <h2>📑 سابعاً: القوائم المالية لشهر يناير 2026</h2>
+    <div class="two-columns">
+        <div class="col">
+            <h3>قائمة الدخل</h3>
+            <table>
+                <tr><td>المبيعات</td><td>36,500</td></tr>
+                <tr><td>إيرادات فوائد</td><td>200</td></tr>
+                <tr><td><strong>إجمالي الإيرادات</strong></td><td><strong>36,700</strong></td></tr>
+                <tr><td>تكلفة البضاعة المباعة (المشتريات)</td><td>40,000</td></tr>
+                <tr><td>مصروف الإهلاك</td><td>1,000</td></tr>
+                <tr><td>مصروف الرواتب</td><td>15,000</td></tr>
+                <tr><td>مصروف الإيجار</td><td>10,000</td></tr>
+                <tr><td>مصروف عمولة بنك</td><td>500</td></tr>
+                <tr><td><strong>إجمالي المصروفات</strong></td><td><strong>66,500</strong></td></tr>
+                <tr><td><strong>صافي الخسارة</strong></td><td><strong>(29,800)</strong></td></tr>
+            </table>
+        </div>
+        <div class="col">
+            <h3>قائمة المركز المالي في 31/1/2026</h3>
+            <table>
+                <tr><th colspan="2">الأصول</th></tr>
+                <tr><td>الصندوق</td><td>2,500</td></tr>
+                <tr><td>البنك</td><td>31,700</td></tr>
+                <tr><td>الأثاث (صافي)</td><td>59,000</td></tr>
+                <tr><td><strong>إجمالي الأصول</strong></td><td><strong>93,200</strong></td></tr>
+                <tr><th colspan="2">الخصوم وحقوق الملكية</th></tr>
+                <tr><td>الرواتب المستحقة</td><td>15,000</td></tr>
+                <tr><td>الإيراد غير المكتسب</td><td>8,000</td></tr>
+                <tr><td>رأس المال</td><td>100,000</td></tr>
+                <tr><td>صافي الخسارة</td><td>(29,800)</td></tr>
+                <tr><td><strong>إجمالي خصوم + حقوق ملكية</strong></td><td><strong>93,200</strong></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- التسوية البنكية -->
+    <h2>🏦 ثامناً: التسوية البنكية (كشف بنك مصر vs دفاتر الشركة)</h2>
+    <table>
+        <thead><tr><th>البيان</th><th>دفتر الشركة</th><th>كشف البنك</th></tr></thead>
+        <tbody>
+            <tr><td>الرصيد قبل التسوية</td><td>31,700</td><td>51,700</td></tr>
+            <tr><td>شيكات صادرة لم تصرف (المورد سعيد)</td><td>+20,000</td><td>--</td></tr>
+            <tr><td>الرصيد المعدل بعد التسوية</td><td><strong>51,700</strong></td><td><strong>51,700</strong></td></tr>
+        </tbody>
+    </table>
+    <div class="note">
+        💡 ملاحظة: شيك المورد سعيد (20,000 ج) لم يظهر في كشف البنك حتى نهاية يناير، ولذلك تم إضافته لتسوية الرصيد.
+    </div>
+
+    <!-- أسئلة للنقاش -->
+    <h2>❓ تاسعاً: أسئلة ومناقشة للقارئ (تعزيز الفهم العملي)</h2>
+    <ul style="margin-right: 30px; line-height: 1.7;">
+        <li>لماذا تم إظهار "الإيجار المدفوع مقدماً" كأصل قبل التسويات ثم تحول إلى مصروف؟</li>
+        <li>كيف أثر قيد الإيراد غير المكتسب على المركز المالي دون التأثير على قائمة الدخل؟</li>
+        <li>لو أهملنا قيد الإهلاك، كيف كان سيختلف صافي الدخل؟</li>
+        <li>ما الهدف من التسوية البنكية في اكتشاف أخطاء مثل تأخر صرف الشيكات؟</li>
+        <li>كيف يمكن معالجة عملية بيع بالتقسيط لو وُجدت؟</li>
+    </ul>
+
+    <!-- خاتمة -->
+    <h2>📌 خلاصة عملية للكتاب</h2>
+    <p>هذه الحالة العملية متكاملة وتغطي: القيد اليومي من مستندات حقيقية، دفاتر الأستاذ، ميزان المراجعة قبل وبعد التسويات، قوائم الدخل والمركز المالي، التسوية البنكية، معالجة الإيرادات غير المكتسبة والمصروفات المقدمة والمستحقة والإهلاك. يمكن تكرار نفس المنهج على قطاعات أخرى مثل المقاولات أو الخدمات.</p>
+    <p style="margin-top: 20px;">✔ يُنصح بوضع هذه الحالة في نهاية الكتاب كـ <strong>"ملحق عملي تطبيقي شامل"</strong> مع توجيه القارئ إلى تحميل ملف Excel تفاعلي من موقعك ramyfinance (يمكنك تحويل الجداول إلى Excel لاحقاً).</p>
+
+    <footer>
+        © 2026 أ. محمد أحمد رامي – جميع الحقوق محفوظة. تم تصميم هذه الحالة لتكون مرجعاً عملياً للمحاسبين والمتدربين.
+    </footer>
+</div>
+</body>
+</html>
